@@ -1,0 +1,29 @@
+{
+  "id": "aircAruvnKk",
+  "title": "But what is a neural network? & why does it <work>",
+  "description": "Chapter 1 on neural networks.\n\nSupport: https://3b1b.co/support\n\"Quoted\" & <bracketed>.",
+  "channel": "3Blue1Brown",
+  "channel_id": "UCYO_jab_esuFRV4b17AJtAw",
+  "uploader": "3Blue1Brown",
+  "uploader_id": "@3blue1brown",
+  "channel_follower_count": 6300000,
+  "upload_date": "20260914",
+  "duration": 1140,
+  "view_count": 18500000,
+  "like_count": 420000,
+  "age_limit": 0,
+  "live_status": "not_live",
+  "ext": "mp4",
+  "vcodec": "avc1.640028",
+  "acodec": "mp4a.40.2",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "format_id": "137+140",
+  "format": "137 - 1920x1080 (1080p)+140 - audio only (medium)",
+  "webpage_url": "https://www.youtube.com/watch?v=aircAruvnKk",
+  "chapters": [
+    { "start_time": 0.0, "end_time": 60.0, "title": "Intro" },
+    { "start_time": 60.0, "end_time": 1140.0, "title": "The math" }
+  ]
+}

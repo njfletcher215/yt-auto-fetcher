@@ -1,0 +1,91 @@
+{
+  "Items": [
+    {
+      "Id": "jf-item-1",
+      "Name": "20260914 - But what is a neural network [aircAruvnKk]",
+      "Path": "/library/3Blue1Brown/20260914 - But what is a neural network [aircAruvnKk].mp4",
+      "RunTimeTicks": 11400000000,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 10830000000,
+        "PlayCount": 1,
+        "Played": false,
+        "IsFavorite": false,
+        "LastPlayedDate": "2026-09-14T21:14:00.0000000Z"
+      }
+    },
+    {
+      "Id": "jf-item-2",
+      "Name": "20260913 - How Computers Compress Text [searchHit01]",
+      "Path": "/library/Computerphile/20260913 - How Computers Compress Text [searchHit01].mp4",
+      "RunTimeTicks": 13200000000,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 0,
+        "PlayCount": 3,
+        "Played": true,
+        "IsFavorite": true,
+        "LastPlayedDate": "2026-09-14T19:00:00.0000000Z"
+      }
+    },
+    {
+      "Id": "jf-item-3",
+      "Name": "20260911 - Post-Stream VOD [searchHit05]",
+      "Path": "/library/Some Streamer/20260911 - Post-Stream VOD [searchHit05].mp4",
+      "RunTimeTicks": 54000000000,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 16200000000,
+        "PlayCount": 1,
+        "Played": false,
+        "IsFavorite": false,
+        "LastPlayedDate": "2026-09-13T08:00:00.0000000Z"
+      }
+    },
+    {
+      "Id": "jf-item-4",
+      "Name": "Some Movie Nat Ripped Years Ago",
+      "Path": "/mnt/other/movies/Some Movie (2011)/Some Movie.mkv",
+      "RunTimeTicks": 72000000000,
+      "Type": "Movie",
+      "ProviderIds": { "Tmdb": "12345" },
+      "UserData": {
+        "PlaybackPositionTicks": 36000000000,
+        "PlayCount": 1,
+        "Played": false,
+        "IsFavorite": false,
+        "LastPlayedDate": "2026-09-14T01:00:00.0000000Z"
+      }
+    },
+    {
+      "Id": "jf-item-5",
+      "Name": "20260101 - No Runtime [noRuntimeV1]",
+      "Path": "/library/Broken/20260101 - No Runtime [noRuntimeV1].mp4",
+      "RunTimeTicks": 0,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 500000000,
+        "PlayCount": 1,
+        "Played": false,
+        "IsFavorite": false,
+        "LastPlayedDate": "2026-09-14T02:00:00.0000000Z"
+      }
+    },
+    {
+      "Id": "jf-item-6",
+      "Name": "20260910 - Hearted But Never Opened [favNoPlay01]",
+      "Path": "/library/3Blue1Brown/20260910 - Hearted But Never Opened [favNoPlay01].mp4",
+      "RunTimeTicks": 9000000000,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 0,
+        "PlayCount": 0,
+        "Played": false,
+        "IsFavorite": true,
+        "LastPlayedDate": null
+      }
+    }
+  ],
+  "TotalRecordCount": 6,
+  "StartIndex": 0
+}

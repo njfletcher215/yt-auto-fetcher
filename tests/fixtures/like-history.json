@@ -1,0 +1,35 @@
+[
+  {
+    "header": "YouTube",
+    "title": "Liked But what is a neural network?",
+    "titleUrl": "https://www.youtube.com/watch?v=aircAruvnKk",
+    "subtitles": [
+      {
+        "name": "3Blue1Brown",
+        "url": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw"
+      }
+    ],
+    "time": "2026-09-13T22:40:00.000Z",
+    "products": ["YouTube"],
+    "activityControls": ["YouTube watch history"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Liked The Map of Mathematics",
+    "titleUrl": "https://www.youtube.com/watch?v=OmJ-4B-mS-Y",
+    "subtitles": [
+      {
+        "name": "Domain of Science",
+        "url": "https://www.youtube.com/channel/UCxqAWLTk1CmBvZFPzeZMd9A"
+      }
+    ],
+    "time": "2026-08-30T10:00:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Liked a video that has been removed",
+    "time": "2026-08-29T10:00:00.000Z",
+    "products": ["YouTube"]
+  }
+]

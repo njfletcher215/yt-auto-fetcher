@@ -1,0 +1,109 @@
+[
+  {
+    "header": "YouTube",
+    "title": "Watched But what is a neural network?",
+    "titleUrl": "https://www.youtube.com/watch?v=aircAruvnKk",
+    "subtitles": [
+      {
+        "name": "3Blue1Brown",
+        "url": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw"
+      }
+    ],
+    "time": "2026-09-13T22:14:05.123Z",
+    "products": ["YouTube"],
+    "activityControls": ["YouTube watch history"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched The Essence of Calculus",
+    "titleUrl": "https://www.youtube.com/watch?v=WUvTyaaNkzM&t=42s",
+    "subtitles": [
+      {
+        "name": "3Blue1Brown",
+        "url": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw"
+      }
+    ],
+    "time": "2026-09-12T18:02:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched But what is a neural network?",
+    "titleUrl": "https://www.youtube.com/watch?v=aircAruvnKk",
+    "subtitles": [
+      {
+        "name": "3Blue1Brown",
+        "url": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw"
+      }
+    ],
+    "time": "2026-09-14T09:30:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched a video that has been removed",
+    "time": "2026-09-11T11:00:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched https://www.youtube.com/watch?v=noSubsVid01",
+    "titleUrl": "https://www.youtube.com/watch?v=noSubsVid01",
+    "time": "2026-09-10T07:45:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube Music",
+    "title": "Watched Some Song",
+    "titleUrl": "https://music.youtube.com/watch?v=musicTrack1",
+    "subtitles": [
+      {
+        "name": "Some Artist - Topic",
+        "url": "https://www.youtube.com/channel/UCmusicmusicmusicmusic00"
+      }
+    ],
+    "time": "2026-09-09T20:00:00.000Z",
+    "products": ["YouTube Music"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched Sponsored Thing",
+    "titleUrl": "https://www.youtube.com/watch?v=advertVideo",
+    "details": [{ "name": "From Google Ads" }],
+    "time": "2026-09-08T12:00:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Visited 3Blue1Brown",
+    "titleUrl": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw",
+    "time": "2026-09-07T12:00:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched Essentials of Compiler Design",
+    "titleUrl": "https://www.youtube.com/shorts/shortFormV1",
+    "subtitles": [
+      {
+        "name": "Computerphile",
+        "url": "https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA"
+      }
+    ],
+    "time": "2026-09-06T12:00:00.000Z",
+    "products": ["YouTube"]
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched How do Transistors Work?",
+    "titleUrl": "https://youtu.be/shortLinkI1",
+    "subtitles": [
+      {
+        "name": "Veritasium",
+        "url": "https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA"
+      }
+    ],
+    "time": "2026-09-05T12:00:00.000Z",
+    "products": ["YouTube"]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "session-direct",
+    "UserId": "user-1",
+    "UserName": "nat",
+    "Client": "Streamyfin",
+    "DeviceName": "iPhone",
+    "PlayState": {
+      "PositionTicks": 10260000000,
+      "IsPaused": false,
+      "PlayMethod": "DirectPlay"
+    },
+    "NowPlayingItem": {
+      "Id": "jf-item-1",
+      "Name": "20260914 - But what is a neural network [aircAruvnKk]",
+      "Path": "/library/3Blue1Brown/20260914 - But what is a neural network [aircAruvnKk].mp4",
+      "RunTimeTicks": 11400000000,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 10260000000,
+        "PlayCount": 1,
+        "Played": false,
+        "IsFavorite": false
+      }
+    }
+  },
+  {
+    "Id": "session-transcode",
+    "UserId": "user-1",
+    "UserName": "nat",
+    "Client": "Streamyfin",
+    "DeviceName": "iPad",
+    "PlayState": {
+      "PositionTicks": 1200000000,
+      "IsPaused": false,
+      "PlayMethod": "Transcode"
+    },
+    "TranscodingInfo": {
+      "VideoCodec": "h264",
+      "AudioCodec": "aac",
+      "IsVideoDirect": false,
+      "TranscodeReasons": ["VideoCodecNotSupported"]
+    },
+    "NowPlayingItem": {
+      "Id": "jf-item-3",
+      "Name": "20260911 - Post-Stream VOD [searchHit05]",
+      "Path": "/library/Some Streamer/20260911 - Post-Stream VOD [searchHit05].mp4",
+      "RunTimeTicks": 54000000000,
+      "Type": "Video",
+      "UserData": {
+        "PlaybackPositionTicks": 1200000000,
+        "PlayCount": 1,
+        "Played": false,
+        "IsFavorite": false
+      }
+    }
+  },
+  {
+    "Id": "session-idle",
+    "UserId": "user-1",
+    "UserName": "nat",
+    "Client": "Jellyfin Web",
+    "DeviceName": "Firefox",
+    "PlayState": { "PositionTicks": 0, "IsPaused": false }
+  }
+]

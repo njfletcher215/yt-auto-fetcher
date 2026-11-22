@@ -1,0 +1,125 @@
+# yt-auto-fetcher configuration.
+#
+# Loaded from (first hit wins):
+#   1. $YTAF_CONFIG
+#   2. ./config.toml
+#   3. /etc/yt-auto-fetcher/config.toml
+#
+# Every path is configurable so the pipeline can run out of a scratch
+# directory on a workstation and off a RAID mount on the Pi with no code
+# changes.
+
+[paths]
+# Everything the pipeline manages lives under root; library/ state/ logs/ are
+# derived from it unless overridden explicitly.
+root = "~/yt-auto-fetcher-data"
+# library   = "~/yt-auto-fetcher-data/library"
+# state     = "~/yt-auto-fetcher-data/state"
+# logs      = "~/yt-auto-fetcher-data/logs"
+# ledger    = "~/yt-auto-fetcher-data/state/ledger.db"
+# model_dir = "~/yt-auto-fetcher-data/state/model"
+#
+# Where `ytaf save` moves videos you want to keep. This is your existing
+# permanent Jellyfin library and must be OUTSIDE root -- nothing under root
+# survives the retention sweep. Leave empty and `ytaf save` will refuse.
+permanent_library = ""
+
+[discovery]
+# "rss" | "search" | "both"
+strategy = "both"
+# Channel IDs polled over https://www.youtube.com/feeds/videos.xml?channel_id=...
+# Seeded from the Takeout subscriptions export by `ytaf import-takeout`.
+channel_ids = []
+# Only used when strategy includes search. ytsearchdate, never ytsearch.
+keywords = ["3blue1brown", "veritasium", "computerphile"]
+search_results_per_keyword = 40
+# Per-request politeness. Costs nothing at 10 downloads/day.
+sleep_requests = 2
+
+[prefilter]
+# Discard obvious non-starters before they reach the ledger. Bounds are
+# exclusive. RSS entries are enriched with a metadata-only yt-dlp call first,
+# because the feed carries neither duration nor live status.
+min_duration = 300
+max_duration = 7200
+min_view_count = 500
+allow_live = false
+
+[selection]
+# The daily ten: 5 brand new model picks, 2 second chances, 3 random.
+n_model_new = 5
+n_model_repeat = 2
+# Mandatory. n_random = 0 is a config error: the random arm is the control
+# group the model-vs-chance check is measured against, and without it that
+# measurement is not noisy, it is impossible.
+n_random = 3
+# A previously-ignored video is not eligible for a re-offer until this long
+# after it was last offered. Recency is the signal that matters -- three
+# ignored offers two years ago says much less than one last week.
+repeat_cooldown_days = 90
+# Backstop so a video ignored over and over eventually stops coming back.
+# 0 removes the cap and leaves recency as the only gate.
+max_offers = 4
+
+[model]
+# "centroid" (zero training) or "classifier".
+kind = "centroid"
+# "hashing" is deterministic and dependency-free, for tests and for bringing
+# the pipeline up before a real model is in place.
+embedder = "hashing"
+sentence_transformer = "BAAI/bge-small-en-v1.5"
+embedding_dim = 384
+
+[feedback]
+# How Jellyfin playback becomes a label. Not a single threshold, because the
+# signal is not monotonic: abandoning a video a third of the way in is the
+# strongest negative available, while closing it in the first few seconds or
+# never opening it says very little.
+#
+#   >= watch_threshold             watched (positive)
+#   [partial_floor, threshold)     abandoned mid-video (strong negative)
+#   < partial_floor, but opened    quick exit (weak negative)
+#   never opened                   no playback signal
+watch_threshold = 0.60
+partial_floor = 0.15
+# Mirror Jellyfin's heart (UserData.IsFavorite) into the ledger's label, so a
+# like on the phone and `ytaf like` are the same state. An un-hearted item
+# clears a like but never a dislike -- no Jellyfin client has a dislike
+# control, so "not hearted" cannot mean "not disliked".
+sync_favorites = true
+lookback_hours = 48
+
+[download]
+# H.264 + AAC only, capped at 1080p. Do not widen this: above 1080p YouTube
+# serves VP9/AV1, which iOS will not direct play.
+format_selector = "bv*[vcodec^=avc1][height<=1080]+ba[acodec^=mp4a]/b[ext=mp4]"
+merge_output_format = "mp4"
+
+[jellyfin]
+# Leave base_url empty while developing: discovery, scoring and download all
+# work with no Jellyfin. Only feedback, `ytaf like` and the post-download
+# library scan need it.
+#
+# Point this at a *Home Videos* library. There are no season/episode numbers
+# in the naming scheme, so a TV Shows library will not index it.
+base_url = ""
+api_key = ""
+user_id = ""
+# Library id to refresh after a download batch. Empty = refresh everything.
+library_id = ""
+verify_tls = true
+
+[retention]
+# Everything in the managed library older than this is deleted -- including
+# things you liked and things you never watched. Use `ytaf save` to keep
+# something.
+max_age_days = 14
+log_retention_days = 90
+# Alert when free space drops below this.
+min_free_gb = 20
+
+[notify]
+# Off for dev; alerts go nowhere and are recorded in the report instead.
+enabled = false
+ntfy_url = ""
+topic = "yt-auto-fetcher"
